@@ -1,0 +1,8 @@
+<input (keyup)="searchTerm$.next($event.target.value)">
+<ul class="list">
+    <cdk-virtual-scroll-viewport  style="height: 500px" itemSize="90">
+        <ng-container *cdkVirtualFor="let image of images">
+            <li><img [src]="image.associatedMedia[2].contentUrl" height="82" width="82"></li>
+        </ng-container>
+    </cdk-virtual-scroll-viewport>
+</ul>
